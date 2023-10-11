@@ -5,10 +5,6 @@ export default createGlobalStyle`
         font-size: 62.5%;
     }
 
-    #root {
-		min-height: 100vh;
-	}
-
     * {
         margin: 0;
         padding: 0;

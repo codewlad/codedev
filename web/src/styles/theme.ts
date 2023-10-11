@@ -18,6 +18,7 @@ export const themeLight = {
         ROBOTO_20: 'bold 2rem/100% Roboto Slab, serif',
         ROBOTO_70: 'bold 15rem/80% Roboto Slab, serif',
 
+        UBUNTU_14: 'normal 1.4rem/140% Ubuntu, sans-serif',
         UBUNTU_16: 'normal 1.6rem/140% Ubuntu, sans-serif',
         UBUNTU_21: 'bold 2.1rem/100% Ubuntu, sans-serif',
     }

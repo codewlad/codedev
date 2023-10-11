@@ -1,4 +1,13 @@
 import {
+	AiOutlineLinkedin,
+	AiOutlineGithub,
+	AiOutlineGlobal,
+	AiOutlineInstagram,
+} from 'react-icons/ai';
+
+import { IteractiveProfile } from '../../components/IteractiveProfile';
+
+import {
 	Container,
 	Favorites,
 	Header,
@@ -7,6 +16,8 @@ import {
 	Subtitle,
 	Title,
 	DefaultText,
+	SocialMedia,
+	ProfileInfo,
 } from './styles';
 
 export function Home() {
@@ -23,10 +34,45 @@ export function Home() {
 				</DefaultText>
 			</Header>
 
-			<Profile>Profile</Profile>
+			<Profile>
+				<IteractiveProfile />
 
+				<ProfileInfo>
+					<p>
+						Olá, eu sou <strong>Wladimir Gonçalves</strong>!
+					</p>
+					<p>Desenvolvedor Web</p>
+					<p>São Paulo, Brasil</p>
+				</ProfileInfo>
+
+				<SocialMedia>
+					<a
+						href='https://www.linkedin.com/in/wladimir-gon%C3%A7alves'
+						target='_blank'
+					>
+						<AiOutlineLinkedin size={36} />
+					</a>
+					<a
+						href='https://github.com/codewlad'
+						target='_blank'
+					>
+						<AiOutlineGithub size={36} />
+					</a>
+					<a
+						href='https://instagram.com/codewlad'
+						target='_blank'
+					>
+						<AiOutlineInstagram size={36} />
+					</a>
+					<a
+						href='https://codewlad.vercel.app'
+						target='_blank'
+					>
+						<AiOutlineGlobal size={36} />
+					</a>
+				</SocialMedia>
+			</Profile>
 			<Favorites>Favorites</Favorites>
-
 			<Posts>Posts</Posts>
 		</Container>
 	);
