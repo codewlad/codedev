@@ -6,12 +6,14 @@ import {
 } from 'react-icons/ai';
 
 import { IteractiveProfile } from '../../components/IteractiveProfile';
+import { ListOfPosts } from '../../components/Posts/posts';
+import { Posts } from '../../components/Posts';
 
 import {
 	Container,
 	Favorites,
 	Header,
-	Posts,
+	Content,
 	Profile,
 	Subtitle,
 	Title,
@@ -73,7 +75,14 @@ export function Home() {
 				</SocialMedia>
 			</Profile>
 			<Favorites>Favorites</Favorites>
-			<Posts>Posts</Posts>
+			<Content>
+				{ListOfPosts.map((post) => (
+					<Posts
+						data={post}
+						key={post.id}
+					/>
+				))}
+			</Content>
 		</Container>
 	);
 }

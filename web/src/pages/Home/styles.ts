@@ -17,7 +17,7 @@ export const Container = styled.div`
     grid-template-areas: 
         "header profile"
         "favorites profile"
-        "posts profile";
+        "content profile";
     grid-gap: 3.2rem;
     grid-template-columns: auto 300px;
 `
@@ -50,8 +50,8 @@ export const Favorites = styled.div`
     border: 1px solid black;
 `
 
-export const Posts = styled.div`
-    grid-area: posts;
+export const Content = styled.div`
+    grid-area: content;
     border: 1px solid black;
 `
 
