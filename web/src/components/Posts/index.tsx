@@ -1,34 +1,49 @@
-import { Container, ImageGroups, Title } from './styles';
+import { Container, Title } from './styles';
 
-export function Posts({ data }) {
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
+
+import { PostDTO } from '../../dtos/PostDTO';
+
+type Props = {
+	data: PostDTO;
+};
+
+type ImageProps = {
+	original: string;
+	thumbnail: string;
+};
+
+export function Posts({ data }: Props) {
+	const images: ImageProps[] = [];
+
+	data.images.map((item) => {
+		const image = {
+			original: `./src/assets/${item.image}`,
+			thumbnail: `./src/assets/${item.image}`,
+		};
+
+		images.push(image);
+	});
+
 	return (
 		<Container>
 			<Title>{data.title}</Title>
 			<p>{data.intro}</p>
 			<p>{data.description}</p>
 			<p>
-				{data.callToAction}{' '}
+				<strong>{data.callToAction}</strong>
 				<a href={`https://${data.link}`}>{data.link}</a>
 			</p>
-			<ImageGroups>
-				{/*
-					<img
-						src={`./src/assets/${data.image01}`}
-						alt={data.alt01}
-					/>
-					<img
-						src={`./src/assets/${data.image02}`}
-						alt={data.alt02}
-					/>
-				*/}
-				{data.images.map((item, index) => (
-					<img
-						src={`./src/assets/${item.image}`}
-						alt={item.alt}
-						key={index}
-					/>
-				))}
-			</ImageGroups>
+
+			<ImageGallery
+				items={images}
+				showPlayButton={true}
+				showFullscreenButton={true}
+				slideInterval={2000}
+				disableKeyDown={true}
+				showBullets={true}
+			/>
 		</Container>
 	);
 }
