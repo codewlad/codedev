@@ -1,5 +1,5 @@
 export type PostDTO = {
-    id:           string;
+    post_id:           string;
     title:        string;
     intro:        string;
     description:  string;

@@ -12,6 +12,7 @@ import { Posts } from '../../components/Posts';
 import {
 	Container,
 	Pinned,
+	PinnedGroup,
 	Header,
 	Content,
 	Profile,
@@ -21,8 +22,16 @@ import {
 	SocialMedia,
 	ProfileInfo,
 } from './styles';
+import { PinnedCard } from '../../components/PinnedCard';
 
 export function Home() {
+	const pinnedPosts: string[] = [
+		'squoosh',
+		'squoosh2',
+		'squoosh',
+		'squoosh2',
+	];
+
 	return (
 		<Container>
 			<Header>
@@ -74,7 +83,17 @@ export function Home() {
 					</a>
 				</SocialMedia>
 			</Profile>
-			<Pinned>Fixados</Pinned>
+			<Pinned>
+				<h2>Fixados</h2>
+				<PinnedGroup>
+					{pinnedPosts.map((item, index) => (
+						<PinnedCard
+							data={item}
+							key={index}
+						/>
+					))}
+				</PinnedGroup>
+			</Pinned>
 			<Content>
 				{ListOfPosts.map((post) => (
 					<Posts

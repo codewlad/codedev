@@ -47,7 +47,19 @@ export const Profile = styled.div`
 
 export const Pinned = styled.div`
     grid-area: pinned;
-    border: 1px solid black;
+    
+    h2 {
+        color: ${({ theme }) => theme.COLORS.BLUE_200};
+        margin-bottom: 1.2rem;
+    }
+`
+
+export const PinnedGroup = styled.div`
+    display: flex;
+    gap: 1.2rem;
+    width: 100%;
+
+    flex-wrap: wrap;
 `
 
 export const Content = styled.div`
