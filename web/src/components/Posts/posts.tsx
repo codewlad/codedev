@@ -1,6 +1,6 @@
 export const ListOfPosts = [
 	{
-		id: 1,
+		post_id: 'squoosh',
 		title: 'Squoosh - Compressor de Imagens',
 		intro: 'Uma das formas para otimizar um site é diminuir o tempo de carregamento e o consumo de dados assim que ele é aberto. Para isso, uma técnica extremamente eficiente é diminuir o tamanho dos arquivos de imagens!',
 		description:

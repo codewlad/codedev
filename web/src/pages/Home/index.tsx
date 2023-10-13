@@ -11,7 +11,7 @@ import { Posts } from '../../components/Posts';
 
 import {
 	Container,
-	Favorites,
+	Pinned,
 	Header,
 	Content,
 	Profile,
@@ -74,12 +74,12 @@ export function Home() {
 					</a>
 				</SocialMedia>
 			</Profile>
-			<Favorites>Favorites</Favorites>
+			<Pinned>Fixados</Pinned>
 			<Content>
 				{ListOfPosts.map((post) => (
 					<Posts
 						data={post}
-						key={post.id}
+						key={post.post_id}
 					/>
 				))}
 			</Content>

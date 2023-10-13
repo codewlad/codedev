@@ -9,14 +9,14 @@ export const Container = styled.div`
     background-color: ${({ theme }) => theme.COLORS.GRAY_100};
 
     border: 1px solid ${({ theme }) => theme.COLORS.DEFAULT};
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
+    border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
 
     display: grid;
     grid-template-areas: 
         "header profile"
-        "favorites profile"
+        "pinned profile"
         "content profile";
     grid-gap: 3.2rem;
     grid-template-columns: auto 300px;
@@ -42,11 +42,11 @@ export const Profile = styled.div`
     grid-area: profile;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 1.2rem;
 `
 
-export const Favorites = styled.div`
-    grid-area: favorites;
+export const Pinned = styled.div`
+    grid-area: pinned;
     border: 1px solid black;
 `
 
@@ -55,6 +55,8 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
+    border-radius: 0.4rem;
+    border: 1px solid ${({ theme }) => theme.COLORS.BLUE_100};
 `
 
 export const DefaultText = styled.p`
@@ -64,15 +66,15 @@ export const DefaultText = styled.p`
 const divFrame = styled.div`
     display: flex;
     align-items: center;
-
-    border-radius: 4px;
+    border: 1px solid ${({ theme }) => theme.COLORS.BLUE_100};
+    border-radius: 0.4rem;
     background: ${({ theme }) => theme.COLORS.WHITE};
 `
 
 export const ProfileInfo = styled(divFrame)`
     flex-direction: column;
     align-items: flex-end;
-    padding: 4px 12px;
+    padding: 0.4rem 1.2rem;
 
     p {
         font: ${({ theme }) => theme.FONTS.UBUNTU_14}
@@ -96,8 +98,8 @@ export const SocialMedia = styled(divFrame)`
         justify-content: center;
         flex: 1;
         height: 4.5rem;
-        border-right: 1px solid ${({ theme }) => theme.COLORS.BLUE_200};
         background: ${({ theme }) => theme.COLORS.WHITE};
+        border-right: 1px solid ${({ theme }) => theme.COLORS.BLUE_100};
 
         svg {
             color: ${({ theme }) => theme.COLORS.BLUE_200};
@@ -150,11 +152,11 @@ export const SocialMedia = styled(divFrame)`
     }
 
     a:first-child {
-        border-radius: 4px 0 0 4px;
+        border-radius: 0.3rem 0 0 0.3rem;
     }
 
     a:last-child {
         border-right: none;
-        border-radius: 0 4px 4px 0;
+        border-radius: 0 0.3rem 0.3rem 0;
     }
 `
