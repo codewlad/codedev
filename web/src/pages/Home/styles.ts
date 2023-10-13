@@ -52,7 +52,9 @@ export const Favorites = styled.div`
 
 export const Content = styled.div`
     grid-area: content;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
 `
 
 export const DefaultText = styled.p`
