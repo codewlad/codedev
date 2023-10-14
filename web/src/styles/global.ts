@@ -17,4 +17,31 @@ export default createGlobalStyle`
         font: ${({ theme }) => theme.FONTS.UBUNTU_16};
         color: ${({ theme }) => theme.COLORS.DEFAULT};
     }
+
+    ::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: ${({ theme }) => theme.COLORS.BLUE_100};
+        border-radius: 0.5rem;
+    }
+
+    * {
+        scrollbar-color: ${({ theme }) => theme.COLORS.BLUE_100} transparent;
+    }
+
+    *::-moz-scrollbar-thumb {
+        background-color: red;
+        border-radius: 0.5rem;
+    }
+
+    ::-ms-scrollbar {
+        width: 0.5rem;
+    }
+
+    ::-ms-scrollbar-thumb {
+        background-color: ${({ theme }) => theme.COLORS.BLUE_100};
+        border-radius: 0.5rem;
+    }
 `
