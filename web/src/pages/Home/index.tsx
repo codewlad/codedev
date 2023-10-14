@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { BiSearchAlt } from 'react-icons/bi';
 import {
 	AiOutlineLinkedin,
@@ -25,14 +25,18 @@ import {
 	ProfileInfo,
 	ContentHeader,
 	Search,
+	ShowAllPosts,
 } from './styles';
 import { PinnedCard } from '../../components/PinnedCard';
 
 import { PostDTO } from '../../dtos/PostDTO';
 
 export function Home() {
+	const inputElement = useRef<HTMLInputElement | null>(null);
 	const [search, setSearch] = useState('');
 	const [filteredPosts, setFilteredPosts] = useState<PostDTO[]>([]);
+	const [pinnedPostIsActive, setPinnedPostIsActive] =
+		useState<boolean>(false);
 
 	const pinnedPosts: string[] = [
 		'squoosh',
@@ -48,6 +52,23 @@ export function Home() {
 			return postText.toLowerCase().includes(search.toLowerCase());
 		});
 		return results;
+	};
+
+	const handlePinnedClick = (item: string) => {
+		const results = ListOfPosts.filter((post) => {
+			return post.post_id === item;
+		});
+		setFilteredPosts(results);
+		setPinnedPostIsActive(true);
+	};
+
+	const handleClearFilters = () => {
+		setSearch('');
+		setFilteredPosts(ListOfPosts);
+		setPinnedPostIsActive(false);
+		if (inputElement.current) {
+			inputElement.current.value = '';
+		}
 	};
 
 	useEffect(() => {
@@ -113,6 +134,7 @@ export function Home() {
 						<PinnedCard
 							data={item}
 							key={index}
+							onClick={() => handlePinnedClick(item)}
 						/>
 					))}
 				</PinnedGroup>
@@ -120,14 +142,22 @@ export function Home() {
 			<Content>
 				<ContentHeader>
 					<h2>Postagens</h2>
+					{(pinnedPostIsActive || search.length > 0) && (
+						<ShowAllPosts onClick={handleClearFilters}>
+							Limpar filtros
+						</ShowAllPosts>
+					)}
+
 					<Search>
 						<BiSearchAlt size={24} />
+
 						<input
 							id='search'
 							type='text'
 							placeholder='O que deseja buscar?'
 							autoComplete='off'
 							onChange={(e) => setSearch(e.target.value)}
+							ref={inputElement}
 						/>
 					</Search>
 				</ContentHeader>

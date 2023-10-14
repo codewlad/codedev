@@ -197,3 +197,34 @@ export const Search = styled.div`
         color: ${({ theme }) => theme.COLORS.DEFAULT};
     }
 `
+
+export const ShowAllPosts = styled.button`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 11.5rem;
+    height: 2.6rem;
+    padding: 0 1.2rem;    
+
+    color: ${({ theme }) => theme.COLORS.BLUE_200};
+    outline: none;
+    border-radius: 0.4rem;
+    border: 1px solid ${({ theme }) => theme.COLORS.BLUE_200};
+
+    font: ${({ theme }) => theme.FONTS.UBUNTU_14};
+    cursor: pointer;
+
+    &:focus {
+        color: ${({ theme }) => theme.COLORS.WHITE};    
+        background: radial-gradient(circle, rgba(163,189,237,1) 0%, rgba(105,145,199,1) 100%);
+    }
+
+    &:hover {
+        color: ${({ theme }) => theme.COLORS.WHITE};
+        background: radial-gradient(circle, rgba(163,189,237,1) 0%, rgba(105,145,199,1) 100%);
+    }
+
+    &:active {
+        background: radial-gradient(circle, rgba(163,189,237,1) 0%, rgba(95,135,189,1) 100%);
+    }
+`
