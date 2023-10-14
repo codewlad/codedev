@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import firstLayerProfile from '../../assets/first-layer-profile.jpg';
-import secondLayerProfile from '../../assets/second-layer-profile.png';
+import firstLayerProfile from '../../assets/first-layer-profile.webp';
+import secondLayerProfile from '../../assets/second-layer-profile.webp';
 
 export const IteractiveImage = styled.div`
     max-width: 300px;

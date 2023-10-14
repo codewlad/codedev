@@ -38,12 +38,7 @@ export function Home() {
 	const [pinnedPostIsActive, setPinnedPostIsActive] =
 		useState<boolean>(false);
 
-	const pinnedPosts: string[] = [
-		'squoosh',
-		'squoosh2',
-		'squoosh',
-		'squoosh2',
-	];
+	const pinnedPosts: string[] = ['squoosh-0001', 'pagespeed-0002'];
 
 	const handleFilterPosts = (search: string) => {
 		const results = ListOfPosts.filter((post) => {

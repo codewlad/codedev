@@ -1,4 +1,4 @@
-import { Container, Title } from './styles';
+import { Container, Title, ImageContainer } from './styles';
 
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
@@ -33,17 +33,24 @@ export function Posts({ data }: Props) {
 			<p>{data.description}</p>
 			<p>
 				<strong>{data.callToAction}</strong>
-				<a href={`https://${data.link}`}>{data.link}</a>
+				<a
+					href={`https://${data.link}`}
+					target='_blank'
+				>
+					{data.link}
+				</a>
 			</p>
 
-			<ImageGallery
-				items={images}
-				showPlayButton={true}
-				showFullscreenButton={true}
-				slideInterval={2000}
-				disableKeyDown={true}
-				showBullets={true}
-			/>
+			<ImageContainer>
+				<ImageGallery
+					items={images}
+					showPlayButton={true}
+					showFullscreenButton={true}
+					slideInterval={2000}
+					disableKeyDown={true}
+					showBullets={true}
+				/>
+			</ImageContainer>
 		</Container>
 	);
 }

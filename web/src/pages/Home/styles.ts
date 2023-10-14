@@ -193,8 +193,11 @@ export const Search = styled.div`
         border-radius: 0.4rem;
         border: 1px solid ${({ theme }) => theme.COLORS.BLUE_100};
         padding: 0.4rem 1.2rem;
-        outline: none;
         color: ${({ theme }) => theme.COLORS.DEFAULT};
+
+        &:focus {
+            outline: 2px solid ${({ theme }) => theme.COLORS.BLUE_200}; 
+        }
     }
 `
 
@@ -206,8 +209,8 @@ export const ShowAllPosts = styled.button`
     height: 2.6rem;
     padding: 0 1.2rem;    
 
-    color: ${({ theme }) => theme.COLORS.BLUE_200};
-    outline: none;
+color: ${({ theme }) => theme.COLORS.BLUE_200};
+outline: none;
     border-radius: 0.4rem;
     border: 1px solid ${({ theme }) => theme.COLORS.BLUE_200};
 

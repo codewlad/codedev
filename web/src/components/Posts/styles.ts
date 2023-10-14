@@ -15,9 +15,18 @@ export const Container = styled.div`
         text-decoration: none;
         font: ${({ theme }) => theme.FONTS.UBUNTU_21};
         color: ${({ theme }) => theme.COLORS.BLUE_200};
+
+        &:is(:hover, :focus) {
+            color: ${({ theme }) => theme.COLORS.BLUE_100};
+            outline: none;
+        }
     }
 `
 
 export const Title = styled.h2`
     color: ${({ theme }) => theme.COLORS.BLUE_200};
+`
+
+export const ImageContainer = styled.div`
+    border: 1px solid ${({ theme }) => theme.COLORS.GRAY_100};
 `
