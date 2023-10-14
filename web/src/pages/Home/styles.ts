@@ -66,9 +66,11 @@ export const Content = styled.div`
     grid-area: content;
     display: flex;
     flex-direction: column;
-    gap: 3.2rem;
     border-radius: 0.4rem;
-    border: 1px solid ${({ theme }) => theme.COLORS.BLUE_100};
+
+    h2 {
+        color: ${({ theme }) => theme.COLORS.BLUE_200};
+    }
 `
 
 export const DefaultText = styled.p`
@@ -170,5 +172,28 @@ export const SocialMedia = styled(divFrame)`
     a:last-child {
         border-right: none;
         border-radius: 0 0.3rem 0.3rem 0;
+    }
+`
+
+export const ContentHeader = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+`
+
+export const Search = styled.div`
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+
+    input {
+        height: 2.6rem;
+        width: 16rem;
+        border-radius: 0.4rem;
+        border: 1px solid ${({ theme }) => theme.COLORS.BLUE_100};
+        padding: 0.4rem 1.2rem;
+        outline: none;
+        color: ${({ theme }) => theme.COLORS.DEFAULT};
     }
 `

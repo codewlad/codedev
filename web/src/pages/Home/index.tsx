@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+import { BiSearchAlt } from 'react-icons/bi';
 import {
 	AiOutlineLinkedin,
 	AiOutlineGithub,
@@ -21,16 +23,37 @@ import {
 	DefaultText,
 	SocialMedia,
 	ProfileInfo,
+	ContentHeader,
+	Search,
 } from './styles';
 import { PinnedCard } from '../../components/PinnedCard';
 
+import { PostDTO } from '../../dtos/PostDTO';
+
 export function Home() {
+	const [search, setSearch] = useState('');
+	const [filteredPosts, setFilteredPosts] = useState<PostDTO[]>([]);
+
 	const pinnedPosts: string[] = [
 		'squoosh',
 		'squoosh2',
 		'squoosh',
 		'squoosh2',
 	];
+
+	const handleFilterPosts = (search: string) => {
+		const results = ListOfPosts.filter((post) => {
+			const postText =
+				post.title + ' ' + post.intro + ' ' + post.description;
+			return postText.toLowerCase().includes(search.toLowerCase());
+		});
+		return results;
+	};
+
+	useEffect(() => {
+		const searchResults = handleFilterPosts(search);
+		setFilteredPosts(searchResults);
+	}, [search]);
 
 	return (
 		<Container>
@@ -95,12 +118,30 @@ export function Home() {
 				</PinnedGroup>
 			</Pinned>
 			<Content>
-				{ListOfPosts.map((post) => (
+				<ContentHeader>
+					<h2>Postagens</h2>
+					<Search>
+						<BiSearchAlt size={24} />
+						<input
+							id='search'
+							type='text'
+							placeholder='O que deseja buscar?'
+							autoComplete='off'
+							onChange={(e) => setSearch(e.target.value)}
+						/>
+					</Search>
+				</ContentHeader>
+
+				{filteredPosts.map((post, index) => (
 					<Posts
 						data={post}
-						key={post.post_id}
+						key={index}
 					/>
 				))}
+
+				{filteredPosts.length <= 0 && (
+					<p>Nenhuma postagem encontrada.</p>
+				)}
 			</Content>
 		</Container>
 	);

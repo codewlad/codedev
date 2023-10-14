@@ -5,9 +5,11 @@ export const Container = styled.div`
     flex-direction: column;
     gap: 12px;
     padding: 24px;
+    margin-bottom: 3.2rem;
 
     background: ${({ theme }) => theme.COLORS.WHITE};
     border-radius: 0.4rem;
+    border: 1px solid ${({ theme }) => theme.COLORS.BLUE_100};
 
     a {
         text-decoration: none;
