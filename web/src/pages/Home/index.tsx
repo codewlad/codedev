@@ -13,7 +13,7 @@ import { PinnedCard } from '@components/PinnedCard';
 import { ListOfPosts } from '@components/Posts/posts';
 import { IteractiveProfile } from '@components/IteractiveProfile';
 
-import { PostDTO } from '../../dtos/PostDTO';
+import { PostDTO } from '@dtos/PostDTO';
 
 import {
 	Container,
@@ -40,12 +40,7 @@ export function Home() {
 	const [pinnedPostIsActive, setPinnedPostIsActive] =
 		useState<boolean>(false);
 
-	const pinnedPosts: string[] = [
-		'squoosh-0001',
-		'pagespeed-0002',
-		'squoosh-0001',
-		'pagespeed-0002',
-	];
+	const pinnedPosts: string[] = ['squoosh-0001', 'pagespeed-0002'];
 
 	const handleFilterPosts = (search: string) => {
 		const results = ListOfPosts.filter((post) => {

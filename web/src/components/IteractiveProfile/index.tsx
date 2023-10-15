@@ -5,7 +5,7 @@ import {
 	SecondLayerProfile,
 } from './styles';
 
-import spaceBg from '../../assets/space-bg.png';
+import spaceBg from '@assets/space-bg.png';
 
 export const IteractiveProfile = () => {
 	let controll = false;

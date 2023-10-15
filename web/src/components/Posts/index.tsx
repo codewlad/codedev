@@ -3,7 +3,9 @@ import { Container, ImageContainer } from './styles';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 
-import { PostDTO } from '../../dtos/PostDTO';
+import { PostDTO } from '@dtos/PostDTO';
+
+import { DeployURL } from '@components/Posts/posts';
 
 type Props = {
 	data: PostDTO;
@@ -19,8 +21,8 @@ export function Posts({ data }: Props) {
 
 	data.images.map((item) => {
 		const image = {
-			original: `/src/assets/${item.image}`,
-			thumbnail: `/src/assets/${item.image}`,
+			original: `${DeployURL}/${item.image}`,
+			thumbnail: `${DeployURL}/${item.image}`,
 		};
 
 		images.push(image);

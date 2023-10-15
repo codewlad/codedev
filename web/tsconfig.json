@@ -23,8 +23,11 @@
     // Configuração para mapear a pasta "assets"
     "baseUrl": "./",
     "paths": {
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"],
       "@assets/*": ["./src/assets/*"],
-      "@components/*": ["./src/components/*"]
+      "@dtos/*": ["./src/dtos/*"],
+      
     }
   },
   "include": ["src"],
