@@ -10,13 +10,16 @@ type Props = {
 export function PinnedCard({ data, onClick }: Props) {
 	const card = ListOfPosts.find((post) => post.post_id === data);
 
+	const url =
+		'https://raw.githubusercontent.com/codewlad/codedev/main/web/src/assets';
+
 	return (
 		<Container
 			onClick={onClick}
 			style={{
-				backgroundImage: `url(../../../../src/assets/${card?.images[0].image})`,
-				backgroundSize: 'cover', // You can adjust this as needed
-				backgroundRepeat: 'no-repeat', // You can adjust this as needed
+				backgroundImage: `url(${url}/${card?.images[0].image})`,
+				backgroundSize: 'cover',
+				backgroundRepeat: 'no-repeat',
 			}}
 		>
 			<CardName>{card?.title}</CardName>

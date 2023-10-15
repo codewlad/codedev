@@ -15,14 +15,12 @@ type ImageProps = {
 };
 
 export function Posts({ data }: Props) {
-	const baseURL = 'https://codewlad-dev.vercel.app'; // 'https://codewlad-dev.vercel.app/'  'http://localhost:5173/'
-
 	const images: ImageProps[] = [];
 
 	data.images.map((item) => {
 		const image = {
-			original: `${baseURL}/assets/${item.image}`,
-			thumbnail: `/web/src/assets/${item.image}`,
+			original: `/src/assets/${item.image}`,
+			thumbnail: `/src/assets/${item.image}`,
 		};
 
 		images.push(image);

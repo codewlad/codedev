@@ -37,24 +37,4 @@ export const ListOfPosts = [
 		],
 		link: 'pagespeed.web.dev',
 	},
-	/*
-	{
-		post_id: 2,
-		title: '',
-		intro: '',
-		description: '',
-		callToAction: '',
-		images: [
-			{
-				image: '',
-				alt: '',
-			},
-			{
-				image: '',
-				alt: '',
-			},
-		],
-		link: '',
-	},
-	*/
 ];

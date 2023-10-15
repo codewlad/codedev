@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+
 import { BiSearchAlt } from 'react-icons/bi';
 import {
 	AiOutlineLinkedin,
@@ -7,9 +8,12 @@ import {
 	AiOutlineInstagram,
 } from 'react-icons/ai';
 
-import { IteractiveProfile } from '../../components/IteractiveProfile';
-import { ListOfPosts } from '../../components/Posts/posts';
-import { Posts } from '../../components/Posts';
+import { Posts } from '@components/Posts';
+import { PinnedCard } from '@components/PinnedCard';
+import { ListOfPosts } from '@components/Posts/posts';
+import { IteractiveProfile } from '@components/IteractiveProfile';
+
+import { PostDTO } from '../../dtos/PostDTO';
 
 import {
 	Container,
@@ -28,9 +32,6 @@ import {
 	Search,
 	ShowAllPosts,
 } from './styles';
-import { PinnedCard } from '../../components/PinnedCard';
-
-import { PostDTO } from '../../dtos/PostDTO';
 
 export function Home() {
 	const inputElement = useRef<HTMLInputElement | null>(null);
@@ -127,35 +128,6 @@ export function Home() {
 						<AiOutlineGlobal size={36} />
 					</a>
 				</SocialMedia>
-
-				<img
-					src='../../assets/squoosh-02.webp'
-					alt='teste 1'
-				/>
-				<img
-					src='/web/src/assets/squoosh-02.webp'
-					alt='teste 2'
-				/>
-				<img
-					src='../../../src/assets/squoosh-02.webp'
-					alt='teste 3'
-				/>
-				<img
-					src='https://codewlad-dev.vercel.app/src/assets/squoosh-02.webp'
-					alt='teste 4'
-				/>
-				<img
-					src='https://codewlad-dev.vercel.app/assets/squoosh-02.webp'
-					alt='teste 5'
-				/>
-				<img
-					src='./assets/squoosh-02.webp'
-					alt='teste 6'
-				/>
-				<img
-					src='./src/assets/squoosh-02.webp'
-					alt='teste 7'
-				/>
 			</Profile>
 			<Pinned>
 				<h2>Fixados</h2>
