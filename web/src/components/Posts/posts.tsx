@@ -1,3 +1,6 @@
+export const DeployURL = 'https://codewlad-dev.vercel.app';
+//export const DeployURL = '../../../public';
+
 export const ListOfPosts = [
 	{
 		post_id: 'squoosh-0001',
