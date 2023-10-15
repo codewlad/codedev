@@ -22,6 +22,6 @@ export const themeLight = {
         UBUNTU_12: 'normal 1.2rem/140% Ubuntu, sans-serif',
         UBUNTU_14: 'normal 1.4rem/140% Ubuntu, sans-serif',
         UBUNTU_16: 'normal 1.6rem/140% Ubuntu, sans-serif',
-        UBUNTU_21: 'bold 2.1rem/100% Ubuntu, sans-serif',
+        UBUNTU_21: 'bold 2.1rem/140% Ubuntu, sans-serif',
     }
 }

@@ -1,4 +1,4 @@
-import { Container, Title, ImageContainer } from './styles';
+import { Container, ImageContainer } from './styles';
 
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
@@ -28,7 +28,7 @@ export function Posts({ data }: Props) {
 
 	return (
 		<Container>
-			<Title>{data.title}</Title>
+			<h2>{data.title}</h2>
 			<p>{data.intro}</p>
 			<p>{data.description}</p>
 			<p>

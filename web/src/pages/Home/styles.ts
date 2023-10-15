@@ -20,6 +20,21 @@ export const Container = styled.div`
         "content profile";
     grid-gap: 3.2rem;
     grid-template-columns: auto 300px;
+
+    @media (max-width: 1100px) {
+        display: flex;
+        flex-direction: column;
+        margin: 4rem 0;
+    }
+
+    @media (max-width: 620px) {
+        margin: 0;
+        padding: 2rem;
+    }
+
+    @media (max-width: 450px) {
+        padding: 2rem;
+    }
 `
 
 export const Header = styled.div`
@@ -31,6 +46,7 @@ export const Header = styled.div`
 
 export const Title = styled.h1`
     font: ${({ theme }) => theme.FONTS.ROBOTO_70};
+    font-size: clamp(7rem, 1rem + 17vw, 15rem);
     color: ${({ theme }) => theme.COLORS.BLUE_200};
 `
 
@@ -43,6 +59,10 @@ export const Profile = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+
+    @media (max-width: 1100px) {
+        display: none;        
+    }
 `
 
 export const Pinned = styled.div`
@@ -177,9 +197,27 @@ export const SocialMedia = styled(divFrame)`
 
 export const ContentHeader = styled.div`
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 1.2rem;
+
+    h2 {
+        margin-top: 0.2rem;
+    }
+`
+
+export const SearchGroup = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.2rem;
+
+    @media (max-width: 620px) {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1.2rem;
+    }
 `
 
 export const Search = styled.div`
@@ -205,12 +243,12 @@ export const ShowAllPosts = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 11.5rem;
+    width: 16rem;
     height: 2.6rem;
     padding: 0 1.2rem;    
 
-color: ${({ theme }) => theme.COLORS.BLUE_200};
-outline: none;
+    color: ${({ theme }) => theme.COLORS.BLUE_200};
+    outline: none;
     border-radius: 0.4rem;
     border: 1px solid ${({ theme }) => theme.COLORS.BLUE_200};
 

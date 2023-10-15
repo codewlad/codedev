@@ -24,6 +24,7 @@ import {
 	SocialMedia,
 	ProfileInfo,
 	ContentHeader,
+	SearchGroup,
 	Search,
 	ShowAllPosts,
 } from './styles';
@@ -38,7 +39,12 @@ export function Home() {
 	const [pinnedPostIsActive, setPinnedPostIsActive] =
 		useState<boolean>(false);
 
-	const pinnedPosts: string[] = ['squoosh-0001', 'pagespeed-0002'];
+	const pinnedPosts: string[] = [
+		'squoosh-0001',
+		'pagespeed-0002',
+		'squoosh-0001',
+		'pagespeed-0002',
+	];
 
 	const handleFilterPosts = (search: string) => {
 		const results = ListOfPosts.filter((post) => {
@@ -137,24 +143,26 @@ export function Home() {
 			<Content>
 				<ContentHeader>
 					<h2>Postagens</h2>
-					{(pinnedPostIsActive || search.length > 0) && (
-						<ShowAllPosts onClick={handleClearFilters}>
-							Limpar filtros
-						</ShowAllPosts>
-					)}
+					<SearchGroup>
+						<Search>
+							<BiSearchAlt size={24} />
 
-					<Search>
-						<BiSearchAlt size={24} />
+							<input
+								id='search'
+								type='text'
+								placeholder='O que deseja buscar?'
+								autoComplete='off'
+								onChange={(e) => setSearch(e.target.value)}
+								ref={inputElement}
+							/>
+						</Search>
 
-						<input
-							id='search'
-							type='text'
-							placeholder='O que deseja buscar?'
-							autoComplete='off'
-							onChange={(e) => setSearch(e.target.value)}
-							ref={inputElement}
-						/>
-					</Search>
+						{(pinnedPostIsActive || search.length > 0) && (
+							<ShowAllPosts onClick={handleClearFilters}>
+								Limpar filtros
+							</ShowAllPosts>
+						)}
+					</SearchGroup>
 				</ContentHeader>
 
 				{filteredPosts.map((post, index) => (

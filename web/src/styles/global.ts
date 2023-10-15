@@ -16,6 +16,17 @@ export default createGlobalStyle`
         background-color: ${({ theme }) => theme.COLORS.BLUE_200};
         font: ${({ theme }) => theme.FONTS.UBUNTU_16};
         color: ${({ theme }) => theme.COLORS.DEFAULT};
+        padding: 2rem;
+        min-width: 390px;
+
+        @media (max-width: 450px) {
+            padding: 1rem;
+        }
+    }
+
+    h2 {
+        color: ${({ theme }) => theme.COLORS.BLUE_200};
+        font: ${({ theme }) => theme.FONTS.UBUNTU_21};
     }
 
     ::-webkit-scrollbar {

@@ -14,6 +14,7 @@ export const Container = styled.div`
     a {
         text-decoration: none;
         font: ${({ theme }) => theme.FONTS.UBUNTU_21};
+        font-size: clamp(1.6rem, 1rem + 1vw, 2.1rem);
         color: ${({ theme }) => theme.COLORS.BLUE_200};
 
         &:is(:hover, :focus) {
@@ -21,10 +22,6 @@ export const Container = styled.div`
             outline: none;
         }
     }
-`
-
-export const Title = styled.h2`
-    color: ${({ theme }) => theme.COLORS.BLUE_200};
 `
 
 export const ImageContainer = styled.div`

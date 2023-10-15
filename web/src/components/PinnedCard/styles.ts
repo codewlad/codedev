@@ -26,6 +26,18 @@ export const Container = styled.div`
         color: ${({ theme }) => theme.COLORS.WHITE};
         background: radial-gradient(circle, rgba(163,189,237,1) 0%, rgba(95,135,189,1) 100%);
     }
+
+    @media (max-width: 770px) {
+        width: calc(33% - (1.2rem * 2) / 3);        
+    }
+
+    @media (max-width: 620px) {
+        width: calc(50% - (1.2rem) / 2);        
+    }
+
+    @media (max-width: 450px) {
+        width: 100%;        
+    }
 `
 
 export const CardName = styled.button`
