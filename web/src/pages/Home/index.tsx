@@ -127,6 +127,35 @@ export function Home() {
 						<AiOutlineGlobal size={36} />
 					</a>
 				</SocialMedia>
+
+				<img
+					src='../../assets/squoosh-02.webp'
+					alt='teste 1'
+				/>
+				<img
+					src='/web/src/assets/squoosh-02.webp'
+					alt='teste 2'
+				/>
+				<img
+					src='../../../src/assets/squoosh-02.webp'
+					alt='teste 3'
+				/>
+				<img
+					src='https://codewlad-dev.vercel.app/src/assets/squoosh-02.webp'
+					alt='teste 4'
+				/>
+				<img
+					src='https://codewlad-dev.vercel.app/assets/squoosh-02.webp'
+					alt='teste 5'
+				/>
+				<img
+					src='./assets/squoosh-02.webp'
+					alt='teste 6'
+				/>
+				<img
+					src='./src/assets/squoosh-02.webp'
+					alt='teste 7'
+				/>
 			</Profile>
 			<Pinned>
 				<h2>Fixados</h2>
