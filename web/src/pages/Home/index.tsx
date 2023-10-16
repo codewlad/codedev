@@ -42,6 +42,14 @@ export function Home() {
 
 	const pinnedPosts: string[] = ['squoosh-0001', 'pagespeed-0002'];
 
+	/* Mudanças começam aqui */
+	const [currentPage, setCurrentPage] = useState(1);
+	const objectsPerPage = 3;
+	const startIndex = (currentPage - 1) * objectsPerPage;
+	const endIndex = startIndex + objectsPerPage;
+	const totalPages = Math.ceil(filteredPosts.length / objectsPerPage);
+	/* Mudanças terminam aqui */
+
 	const handleFilterPosts = (search: string) => {
 		const results = ListOfPosts.filter((post) => {
 			const postText =
@@ -161,16 +169,47 @@ export function Home() {
 					</SearchGroup>
 				</ContentHeader>
 
-				{filteredPosts.map((post, index) => (
-					<Posts
-						data={post}
-						key={index}
-					/>
-				))}
+				{filteredPosts
+					.slice(startIndex, endIndex)
+					.map((post, index) => (
+						<Posts
+							data={post}
+							key={index}
+						/>
+					))}
 
 				{filteredPosts.length <= 0 && (
 					<p>Nenhuma postagem encontrada.</p>
 				)}
+
+				{/* Botões numerados para navegar entre as páginas */}
+				<div className='pagination'>
+					{Array.from({ length: totalPages }, (_, index) => (
+						<button
+							key={index}
+							onClick={() => setCurrentPage(index + 1)}
+							className={
+								currentPage === index + 1 ? 'active' : ''
+							}
+						>
+							{index + 1}
+						</button>
+					))}
+				</div>
+
+				{/* Botões de "Página Anterior" e "Próxima Página" */}
+				<button
+					onClick={() => setCurrentPage(currentPage - 1)}
+					disabled={currentPage === 1}
+				>
+					Página Anterior
+				</button>
+				<button
+					onClick={() => setCurrentPage(currentPage + 1)}
+					disabled={endIndex >= filteredPosts.length}
+				>
+					Próxima Página
+				</button>
 			</Content>
 		</Container>
 	);

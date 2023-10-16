@@ -1,7 +1,7 @@
 export const DeployURL = 'https://codewlad-dev.vercel.app';
 //export const DeployURL = '../../../public';
 
-export const ListOfPosts = [
+const Posts = [
 	{
 		post_id: 'squoosh-0001',
 		title: 'Squoosh - Compressor de Imagens',
@@ -40,4 +40,104 @@ export const ListOfPosts = [
 		],
 		link: 'pagespeed.web.dev',
 	},
+	{
+		post_id: 'pagespeed-0003',
+		title: 'Teste 3',
+		intro: 'Hoje eu vou apresentar uma ferramenta gratuita desenvolvida pelo Google que todo desenvolvedor Front End deveria conhecer!',
+		description:
+			'O PageSpeed Insights é uma ferramenta que avalia a velocidade e a otimização de páginas da web. Ele fornece pontuações e sugestões para melhorar o desempenho, crucial para uma melhor experiência do usuário e classificações mais altas nos mecanismos de busca.',
+		callToAction: 'Acesse aqui: ',
+		images: [
+			{
+				image: 'pagespeed-01.webp',
+				alt: 'Tela inicial do pageSpeed',
+			},
+			{
+				image: 'pagespeed-02.webp',
+				alt: 'Site verificado no pageSpeed',
+			},
+		],
+		link: 'pagespeed.web.dev',
+	},
+	{
+		post_id: 'pagespeed-0004',
+		title: 'Teste 4',
+		intro: 'Hoje eu vou apresentar uma ferramenta gratuita desenvolvida pelo Google que todo desenvolvedor Front End deveria conhecer!',
+		description:
+			'O PageSpeed Insights é uma ferramenta que avalia a velocidade e a otimização de páginas da web. Ele fornece pontuações e sugestões para melhorar o desempenho, crucial para uma melhor experiência do usuário e classificações mais altas nos mecanismos de busca.',
+		callToAction: 'Acesse aqui: ',
+		images: [
+			{
+				image: 'pagespeed-01.webp',
+				alt: 'Tela inicial do pageSpeed',
+			},
+			{
+				image: 'pagespeed-02.webp',
+				alt: 'Site verificado no pageSpeed',
+			},
+		],
+		link: 'pagespeed.web.dev',
+	},
+
+	{
+		post_id: 'pagespeed-0005',
+		title: 'Teste 5',
+		intro: 'Hoje eu vou apresentar uma ferramenta gratuita desenvolvida pelo Google que todo desenvolvedor Front End deveria conhecer!',
+		description:
+			'O PageSpeed Insights é uma ferramenta que avalia a velocidade e a otimização de páginas da web. Ele fornece pontuações e sugestões para melhorar o desempenho, crucial para uma melhor experiência do usuário e classificações mais altas nos mecanismos de busca.',
+		callToAction: 'Acesse aqui: ',
+		images: [
+			{
+				image: 'pagespeed-01.webp',
+				alt: 'Tela inicial do pageSpeed',
+			},
+			{
+				image: 'pagespeed-02.webp',
+				alt: 'Site verificado no pageSpeed',
+			},
+		],
+		link: 'pagespeed.web.dev',
+	},
+
+	{
+		post_id: 'pagespeed-0006',
+		title: 'Teste 6',
+		intro: 'Hoje eu vou apresentar uma ferramenta gratuita desenvolvida pelo Google que todo desenvolvedor Front End deveria conhecer!',
+		description:
+			'O PageSpeed Insights é uma ferramenta que avalia a velocidade e a otimização de páginas da web. Ele fornece pontuações e sugestões para melhorar o desempenho, crucial para uma melhor experiência do usuário e classificações mais altas nos mecanismos de busca.',
+		callToAction: 'Acesse aqui: ',
+		images: [
+			{
+				image: 'pagespeed-01.webp',
+				alt: 'Tela inicial do pageSpeed',
+			},
+			{
+				image: 'pagespeed-02.webp',
+				alt: 'Site verificado no pageSpeed',
+			},
+		],
+		link: 'pagespeed.web.dev',
+	},
+
+	{
+		post_id: 'pagespeed-0007',
+		title: 'Teste 7',
+		intro: 'Hoje eu vou apresentar uma ferramenta gratuita desenvolvida pelo Google que todo desenvolvedor Front End deveria conhecer!',
+		description:
+			'O PageSpeed Insights é uma ferramenta que avalia a velocidade e a otimização de páginas da web. Ele fornece pontuações e sugestões para melhorar o desempenho, crucial para uma melhor experiência do usuário e classificações mais altas nos mecanismos de busca.',
+		callToAction: 'Acesse aqui: ',
+		images: [
+			{
+				image: 'pagespeed-01.webp',
+				alt: 'Tela inicial do pageSpeed',
+			},
+			{
+				image: 'pagespeed-02.webp',
+				alt: 'Site verificado no pageSpeed',
+			},
+		],
+		link: 'pagespeed.web.dev',
+	},
 ];
+
+export const ListOfPosts = Posts.slice(0).reverse();
