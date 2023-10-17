@@ -197,13 +197,9 @@ export const SocialMedia = styled(divFrame)`
 
 export const ContentHeader = styled.div`
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     margin-bottom: 1.2rem;
-
-    h2 {
-        margin-top: 0.2rem;
-    }
 `
 
 export const SearchGroup = styled.div`
@@ -239,11 +235,10 @@ export const Search = styled.div`
     }
 `
 
-export const ShowAllPosts = styled.button`
+export const DefaultButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 16rem;
     height: 2.6rem;
     padding: 0 1.2rem;    
 
@@ -269,3 +264,15 @@ export const ShowAllPosts = styled.button`
         background: radial-gradient(circle, rgba(163,189,237,1) 0%, rgba(95,135,189,1) 100%);
     }
 `
+
+export const ShowAllPosts = styled(DefaultButton)`
+    width: 16rem;
+`
+
+export const Pagination = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+`
+

@@ -17,7 +17,7 @@ export default createGlobalStyle`
         font: ${({ theme }) => theme.FONTS.UBUNTU_16};
         color: ${({ theme }) => theme.COLORS.DEFAULT};
         padding: 2rem;
-        min-width: 390px;
+        min-width: 360px;
 
         @media (max-width: 450px) {
             padding: 1rem;

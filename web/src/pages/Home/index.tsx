@@ -6,6 +6,8 @@ import {
 	AiOutlineGithub,
 	AiOutlineGlobal,
 	AiOutlineInstagram,
+	AiOutlineDoubleLeft,
+	AiOutlineDoubleRight,
 } from 'react-icons/ai';
 
 import { Posts } from '@components/Posts';
@@ -30,6 +32,8 @@ import {
 	ContentHeader,
 	SearchGroup,
 	Search,
+	DefaultButton,
+	Pagination,
 	ShowAllPosts,
 } from './styles';
 
@@ -182,34 +186,43 @@ export function Home() {
 					<p>Nenhuma postagem encontrada.</p>
 				)}
 
-				{/* Botões numerados para navegar entre as páginas */}
-				<div className='pagination'>
+				<Pagination>
+					{filteredPosts.length > 3 && currentPage != 1 && (
+						<DefaultButton
+							onClick={() => setCurrentPage(currentPage - 1)}
+							disabled={currentPage === 1}
+						>
+							<AiOutlineDoubleLeft />
+						</DefaultButton>
+					)}
 					{Array.from({ length: totalPages }, (_, index) => (
-						<button
+						<DefaultButton
 							key={index}
 							onClick={() => setCurrentPage(index + 1)}
 							className={
 								currentPage === index + 1 ? 'active' : ''
 							}
+							style={
+								currentPage === index + 1
+									? {
+											backgroundColor: '#6991C7',
+											color: '#FFFFFF',
+									  }
+									: { backgroundColor: 'initial' }
+							}
 						>
 							{index + 1}
-						</button>
+						</DefaultButton>
 					))}
-				</div>
-
-				{/* Botões de "Página Anterior" e "Próxima Página" */}
-				<button
-					onClick={() => setCurrentPage(currentPage - 1)}
-					disabled={currentPage === 1}
-				>
-					Página Anterior
-				</button>
-				<button
-					onClick={() => setCurrentPage(currentPage + 1)}
-					disabled={endIndex >= filteredPosts.length}
-				>
-					Próxima Página
-				</button>
+					{filteredPosts.length > 3 && currentPage != totalPages && (
+						<DefaultButton
+							onClick={() => setCurrentPage(currentPage + 1)}
+							disabled={endIndex >= filteredPosts.length}
+						>
+							<AiOutlineDoubleRight />
+						</DefaultButton>
+					)}
+				</Pagination>
 			</Content>
 		</Container>
 	);
