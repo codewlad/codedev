@@ -20,6 +20,12 @@ const Posts = [
 			},
 		],
 		link: 'squoosh.app',
+		listOfLinks: [],
+		credits: {
+			creditsName: '',
+			creditsAddress: '',
+		},
+		postType: 'website',
 	},
 	{
 		post_id: 'pagespeed-0002',
@@ -39,6 +45,48 @@ const Posts = [
 			},
 		],
 		link: 'pagespeed.web.dev',
+		listOfLinks: [],
+		credits: {
+			creditsName: '',
+			creditsAddress: '',
+		},
+		postType: 'website',
+	},
+	{
+		post_id: 'imagebank-0003',
+		title: '5 Sites de banco de imagens gratuitas',
+		intro: 'Precisa de uma imagens específica para seu projeto? Nos 5 sites abaixo você pode pegar qualquer imagem gratuitamente e sem direitos autorais:',
+		description: '',
+		callToAction: '',
+		images: [],
+		link: '',
+		listOfLinks: [
+			{
+				linkTitle: 'Pexels',
+				linkAddress: 'pexels.com',
+			},
+			{
+				linkTitle: 'Unplash',
+				linkAddress: 'unsplash.com',
+			},
+			{
+				linkTitle: 'Gratisography',
+				linkAddress: 'gratisography.com',
+			},
+			{
+				linkTitle: '500px',
+				linkAddress: '500px.com',
+			},
+			{
+				linkTitle: 'VisualHunt',
+				linkAddress: 'visualhunt.com',
+			},
+		],
+		credits: {
+			creditsName: 'Mattheus Pereira',
+			creditsAddress: 'linkedin.com/in/mattheuspereira',
+		},
+		postType: 'listOfWebsites',
 	},
 ];
 

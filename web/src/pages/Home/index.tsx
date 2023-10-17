@@ -44,7 +44,11 @@ export function Home() {
 	const [pinnedPostIsActive, setPinnedPostIsActive] =
 		useState<boolean>(false);
 
-	const pinnedPosts: string[] = ['squoosh-0001', 'pagespeed-0002'];
+	const pinnedPosts: string[] = [
+		'squoosh-0001',
+		'pagespeed-0002',
+		'imagebank-0003',
+	];
 
 	/* Mudanças começam aqui */
 	const [currentPage, setCurrentPage] = useState(1);
@@ -63,7 +67,7 @@ export function Home() {
 		return results;
 	};
 
-	const handlePinnedClick = (item: string) => {
+	const handlePinnedPost = (item: string) => {
 		const results = ListOfPosts.filter((post) => {
 			return post.post_id === item;
 		});
@@ -84,6 +88,15 @@ export function Home() {
 		const searchResults = handleFilterPosts(search);
 		setFilteredPosts(searchResults);
 	}, [search]);
+
+	useEffect(() => {
+		const searchParams = new URLSearchParams(window.location.search);
+		const postID = searchParams.get('postID');
+
+		if (postID) {
+			handlePinnedPost(postID);
+		}
+	}, []);
 
 	return (
 		<Container>
@@ -143,7 +156,7 @@ export function Home() {
 						<PinnedCard
 							data={item}
 							key={index}
-							onClick={() => handlePinnedClick(item)}
+							onClick={() => handlePinnedPost(item)}
 						/>
 					))}
 				</PinnedGroup>

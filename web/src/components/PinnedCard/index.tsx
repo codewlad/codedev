@@ -1,5 +1,7 @@
 import { CardName, Container } from './styles';
 
+import { BsImages } from 'react-icons/bs';
+
 import { ListOfPosts, DeployURL } from '@components/Posts/posts';
 
 type Props = {
@@ -11,15 +13,33 @@ export function PinnedCard({ data, onClick }: Props) {
 	const card = ListOfPosts.find((post) => post.post_id === data);
 
 	return (
-		<Container
-			onClick={onClick}
-			style={{
-				backgroundImage: `url(${DeployURL}/${card?.images[0].image})`,
-				backgroundSize: 'cover',
-				backgroundRepeat: 'no-repeat',
-			}}
-		>
-			<CardName>{card?.title}</CardName>
-		</Container>
+		<>
+			{card?.postType === 'website' && (
+				<Container
+					onClick={onClick}
+					style={{
+						backgroundImage: `url(${DeployURL}/${card?.images[0].image})`,
+						backgroundSize: 'cover',
+						backgroundRepeat: 'no-repeat',
+					}}
+				>
+					<CardName>{card?.title}</CardName>
+				</Container>
+			)}
+
+			{card?.postType === 'listOfWebsites' && (
+				<Container
+					onClick={onClick}
+					style={
+						{
+							//backgroundImage: `url(${DeployURL}/${card?.images[0].image})`,
+						}
+					}
+				>
+					<BsImages size={72} />
+					<CardName>{card?.title}</CardName>
+				</Container>
+			)}
+		</>
 	);
 }

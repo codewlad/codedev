@@ -5,11 +5,20 @@ export const Container = styled.div`
     width: calc(25% - (1.2rem * 3) / 4);
     height: 14.2rem;
 
+    display: flex;
+    justify-content: center;
+
+    padding: 16px;
+
     background: ${({ theme }) => theme.COLORS.WHITE};
     cursor: pointer;
 
     border: 1px solid ${({ theme }) => theme.COLORS.BLUE_100};
     border-radius: 0.4rem;
+
+    svg {
+        color: ${({ theme }) => theme.COLORS.BLUE_200};
+    }
 
     &:hover {
         border: 1px solid ${({ theme }) => theme.COLORS.BLUE_200};

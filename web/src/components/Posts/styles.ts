@@ -27,3 +27,30 @@ export const Container = styled.div`
 export const ImageContainer = styled.div`
     border: 1px solid ${({ theme }) => theme.COLORS.GRAY_100};
 `
+
+export const Credits = styled.p`
+    background-color: ${({ theme }) => theme.COLORS.GRAY_100};
+    margin-top: 1.2rem;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    text-align: center;
+
+    a {
+        font: ${({ theme }) => theme.FONTS.UBUNTU_16};
+        font-weight: bold;
+    }
+`
+
+export const LinksList = styled.p`
+    display: flex;
+    align-items: center;
+    
+    svg {
+        margin-right: 0.4rem;
+        color: ${({ theme }) => theme.COLORS.BLUE_200};
+    }
+
+    a {
+        margin-left: 0.4rem;
+    }
+`
