@@ -240,7 +240,7 @@ export const DefaultButton = styled.button`
     align-items: center;
     justify-content: center;
     height: 2.6rem;
-    padding: 0 1.2rem;    
+    padding: 0 1rem;
 
     color: ${({ theme }) => theme.COLORS.BLUE_200};
     outline: none;
@@ -251,7 +251,7 @@ export const DefaultButton = styled.button`
     cursor: pointer;
 
     &:focus {
-        color: ${({ theme }) => theme.COLORS.WHITE};    
+        color: ${({ theme }) => theme.COLORS.WHITE};
         background: radial-gradient(circle, rgba(163,189,237,1) 0%, rgba(105,145,199,1) 100%);
     }
 
@@ -267,6 +267,7 @@ export const DefaultButton = styled.button`
 
 export const ShowAllPosts = styled(DefaultButton)`
     width: 16rem;
+    padding: 0 1.2rem;
 `
 
 export const Pagination = styled.div`

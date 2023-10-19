@@ -50,13 +50,11 @@ export function Home() {
 		'imagebank-0003',
 	];
 
-	/* Mudanças começam aqui */
 	const [currentPage, setCurrentPage] = useState(1);
 	const objectsPerPage = 3;
 	const startIndex = (currentPage - 1) * objectsPerPage;
 	const endIndex = startIndex + objectsPerPage;
 	const totalPages = Math.ceil(filteredPosts.length / objectsPerPage);
-	/* Mudanças terminam aqui */
 
 	const handleFilterPosts = (search: string) => {
 		const results = ListOfPosts.filter((post) => {
@@ -208,25 +206,77 @@ export function Home() {
 							<AiOutlineDoubleLeft />
 						</DefaultButton>
 					)}
-					{Array.from({ length: totalPages }, (_, index) => (
-						<DefaultButton
-							key={index}
-							onClick={() => setCurrentPage(index + 1)}
-							className={
-								currentPage === index + 1 ? 'active' : ''
+
+					{totalPages > 0 &&
+						Array.from({ length: totalPages }, (_, index) => {
+							if (index === 0 || index === totalPages - 1) {
+								return (
+									<DefaultButton
+										key={index}
+										onClick={() =>
+											setCurrentPage(index + 1)
+										}
+										className={
+											currentPage === index + 1
+												? 'active'
+												: ''
+										}
+										style={
+											currentPage === index + 1
+												? {
+														backgroundColor:
+															'#6991C7',
+														color: '#FFFFFF',
+												  }
+												: { backgroundColor: 'initial' }
+										}
+									>
+										{index + 1}
+									</DefaultButton>
+								);
+							} else if (
+								index === currentPage - 1 ||
+								index === currentPage ||
+								index === currentPage - 2
+							) {
+								return (
+									<DefaultButton
+										key={index}
+										onClick={() =>
+											setCurrentPage(index + 1)
+										}
+										className={
+											currentPage === index + 1
+												? 'active'
+												: ''
+										}
+										style={
+											currentPage === index + 1
+												? {
+														backgroundColor:
+															'#6991C7',
+														color: '#FFFFFF',
+												  }
+												: { backgroundColor: 'initial' }
+										}
+									>
+										{index + 1}
+									</DefaultButton>
+								);
+							} else {
+								if (index === 1 && currentPage > 3) {
+									return <span key={index}>...</span>;
+								}
+
+								if (
+									index === totalPages - 2 &&
+									currentPage < totalPages - 2
+								) {
+									return <span key={index}>...</span>;
+								}
 							}
-							style={
-								currentPage === index + 1
-									? {
-											backgroundColor: '#6991C7',
-											color: '#FFFFFF',
-									  }
-									: { backgroundColor: 'initial' }
-							}
-						>
-							{index + 1}
-						</DefaultButton>
-					))}
+						})}
+
 					{filteredPosts.length > 3 && currentPage != totalPages && (
 						<DefaultButton
 							onClick={() => setCurrentPage(currentPage + 1)}
