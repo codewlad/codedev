@@ -48,6 +48,7 @@ export function Home() {
 		'squoosh-0001',
 		'pagespeed-0002',
 		'imagebank-0003',
+		'mobilefirst-0004',
 	];
 
 	const [currentPage, setCurrentPage] = useState(1);
@@ -99,7 +100,9 @@ export function Home() {
 	return (
 		<Container>
 			<Header>
-				<Title>CodeDev</Title>
+				<a href='../Home'>
+					<Title>CodeDev</Title>
+				</a>
 				<Subtitle>Ganhe tempo desenvolvendo!</Subtitle>
 				<DefaultText style={{ maxWidth: '600px' }}>
 					Este site nasceu com a intenção de reunir diversas dicas,
