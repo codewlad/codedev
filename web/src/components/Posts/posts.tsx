@@ -1,5 +1,5 @@
 export const DeployURL = 'https://codewlad-dev.vercel.app';
-//export const DeployURL = '../../../public';
+//export const DeployURL = '../../..';
 
 const Posts = [
 	{
@@ -87,6 +87,31 @@ const Posts = [
 			creditsAddress: 'linkedin.com/in/mattheuspereira',
 		},
 		postType: 'listOfWebsites',
+	},
+	{
+		post_id: 'mobilefirst-0004',
+		title: 'Mobile First - Simulador de dispositivos',
+		intro: 'O Mobile First é uma extensão para navegadores que permite simular um dispositivo mobile. Ele é perfeito para testar a responsividade de qualquer site com apenas um clique.',
+		description:
+			'Além de poder escolher entre diversos modelos gratuitos, você pode girar o dispositivo, fazer uma captura de tela ou gravar um gif animado para compartilhar onde quiser.',
+		callToAction: 'Acesse aqui: ',
+		images: [
+			{
+				image: 'mobilefirst-01.png',
+				alt: 'Site para baixar a extensão',
+			},
+			{
+				image: 'mobilefirst-02.png',
+				alt: 'Site sendo exibido em um dispositivo mobile',
+			},
+		],
+		link: 'webmobilefirst.com',
+		listOfLinks: [],
+		credits: {
+			creditsName: '',
+			creditsAddress: '',
+		},
+		postType: 'website',
 	},
 ];
 
