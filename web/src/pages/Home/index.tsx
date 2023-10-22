@@ -46,7 +46,7 @@ export function Home() {
 
 	const pinnedPosts: string[] = [
 		'cssflexbox-0005',
-		'pagespeed-0002',
+		'devicon-0006',
 		'imagebank-0003',
 		'mobilefirst-0004',
 	];
