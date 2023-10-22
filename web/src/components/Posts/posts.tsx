@@ -19,6 +19,7 @@ const Posts = [
 				alt: 'Imagem aberta no squoosh',
 			},
 		],
+		video: '',
 		link: 'squoosh.app',
 		listOfLinks: [],
 		credits: {
@@ -44,6 +45,7 @@ const Posts = [
 				alt: 'Site verificado no pageSpeed',
 			},
 		],
+		video: '',
 		link: 'pagespeed.web.dev',
 		listOfLinks: [],
 		credits: {
@@ -59,6 +61,7 @@ const Posts = [
 		description: '',
 		callToAction: '',
 		images: [],
+		video: '',
 		link: '',
 		listOfLinks: [
 			{
@@ -105,6 +108,7 @@ const Posts = [
 				alt: 'Site sendo exibido em um dispositivo mobile',
 			},
 		],
+		video: '',
 		link: 'webmobilefirst.com',
 		listOfLinks: [],
 		credits: {
@@ -112,6 +116,23 @@ const Posts = [
 			creditsAddress: '',
 		},
 		postType: 'website',
+	},
+	{
+		post_id: 'cssflexbox-0005',
+		title: 'CSS Flexbox',
+		intro: 'O Flexbox (ou Flexible Box Layout) é um modelo de layout em CSS projetado para simplificar o design de layouts complexos e a distribuição de espaço entre os elementos em uma página da web.',
+		description:
+			'Confira abaixo esse vídeo sobre as principais propriedades:',
+		callToAction: '',
+		images: [],
+		video: 'flexbox.mp4',
+		link: '',
+		listOfLinks: [],
+		credits: {
+			creditsName: '@coding.stella',
+			creditsAddress: 'instagram.com/coding.stella',
+		},
+		postType: 'video',
 	},
 ];
 

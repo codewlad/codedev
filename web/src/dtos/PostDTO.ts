@@ -5,6 +5,7 @@ export type PostDTO = {
     description:  string;
     callToAction: string;
     images:       Image[];
+    video:       string;
     link:         string;
     listOfLinks:  ListOfLinks[];
     credits:      Credits;

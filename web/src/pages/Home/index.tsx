@@ -45,7 +45,7 @@ export function Home() {
 		useState<boolean>(false);
 
 	const pinnedPosts: string[] = [
-		'squoosh-0001',
+		'cssflexbox-0005',
 		'pagespeed-0002',
 		'imagebank-0003',
 		'mobilefirst-0004',

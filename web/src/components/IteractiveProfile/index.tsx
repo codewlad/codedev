@@ -76,10 +76,10 @@ export const IteractiveProfile = () => {
 
 		setAnimationTime({ firstLayer, secondLayer });
 
-		firstLayer.style.backgroundPositionX = '0s';
-		firstLayer.style.backgroundPositionY = '0s';
-		secondLayer.style.backgroundPositionX = '0s';
-		secondLayer.style.backgroundPositionY = '0s';
+		firstLayer.style.backgroundPositionX = '0';
+		firstLayer.style.backgroundPositionY = '0';
+		secondLayer.style.backgroundPositionX = '0';
+		secondLayer.style.backgroundPositionY = '0';
 
 		controll = false;
 	}

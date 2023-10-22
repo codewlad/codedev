@@ -1,4 +1,4 @@
-import { Container, ImageContainer, Credits, LinksList } from './styles';
+import { Container, ImageContainer, Credits, LinksList, Video } from './styles';
 
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
@@ -73,6 +73,18 @@ export function Posts({ data }: Props) {
 						showBullets={true}
 					/>
 				</ImageContainer>
+			)}
+
+			{data.video && (
+				<Video>
+					<video controls>
+						<source
+							src={`${DeployURL}/${data.video}`}
+							type='video/mp4'
+						/>
+						Seu navegador não suporta o elemento de vídeo.
+					</video>
+				</Video>
 			)}
 
 			{data.credits.creditsName && (

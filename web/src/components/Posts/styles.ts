@@ -54,3 +54,19 @@ export const LinksList = styled.p`
         margin-left: 0.4rem;
     }
 `
+
+export const Video = styled.div`
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+`
