@@ -3,12 +3,12 @@ export const themeLight = {
         WHITE: '#FFFFFF',
         BLACK: '#000000',
 
-        DEFAULT: '#4D585E',
+        DEFAULT: '#3A474F',
 
         GRAY_100: '#E1E1E6',
 
         BLUE_100: '#A3BDED',        
-        BLUE_200: '#6991C7',
+        BLUE_200: '#2264AD',
     },
     FONTS: {
         ROBOTO_12: 'normal 1.2rem/100% Roboto Slab, serif',

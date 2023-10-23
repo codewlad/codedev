@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
 
+import { ThemeContext } from 'styled-components';
 import { BiSearchAlt } from 'react-icons/bi';
 import {
 	AiOutlineLinkedin,
@@ -38,6 +39,8 @@ import {
 } from './styles';
 
 export function Home() {
+	const theme = useContext(ThemeContext);
+
 	const inputElement = useRef<HTMLInputElement | null>(null);
 	const [search, setSearch] = useState('');
 	const [filteredPosts, setFilteredPosts] = useState<PostDTO[]>([]);
@@ -105,7 +108,7 @@ export function Home() {
 				</a>
 				<Subtitle>Ganhe tempo desenvolvendo!</Subtitle>
 				<DefaultText style={{ maxWidth: '600px' }}>
-					Este site nasceu com a intenção de reunir diversas dicas,
+					Este blog nasceu com a intenção de reunir diversas dicas,
 					ferramentas e sites que facilitam e otimizam o dia a dia de
 					nós, Devs! Sempre que possível, darei o devido crédito ao
 					autor ou à fonte da informação. Usem sem moderação!
@@ -127,24 +130,28 @@ export function Home() {
 					<a
 						href='https://www.linkedin.com/in/wladimir-gon%C3%A7alves'
 						target='_blank'
+						aria-label='Ir para o perfil no Linkedin'
 					>
 						<AiOutlineLinkedin size={36} />
 					</a>
 					<a
 						href='https://github.com/codewlad'
 						target='_blank'
+						aria-label='Ir para o perfil no GitHub'
 					>
 						<AiOutlineGithub size={36} />
 					</a>
 					<a
 						href='https://instagram.com/codewlad'
 						target='_blank'
+						aria-label='Ir para o perfil no Instagram'
 					>
 						<AiOutlineInstagram size={36} />
 					</a>
 					<a
 						href='https://codewlad.vercel.app'
 						target='_blank'
+						aria-label='Ir para o portfolio'
 					>
 						<AiOutlineGlobal size={36} />
 					</a>
@@ -180,7 +187,10 @@ export function Home() {
 						</Search>
 
 						{(pinnedPostIsActive || search.length > 0) && (
-							<ShowAllPosts onClick={handleClearFilters}>
+							<ShowAllPosts
+								aria-label='Limpar filtros'
+								onClick={handleClearFilters}
+							>
 								Limpar filtros
 							</ShowAllPosts>
 						)}
@@ -203,6 +213,7 @@ export function Home() {
 				<Pagination>
 					{filteredPosts.length > 3 && currentPage != 1 && (
 						<DefaultButton
+							aria-label='Previous page'
 							onClick={() => setCurrentPage(currentPage - 1)}
 							disabled={currentPage === 1}
 						>
@@ -215,6 +226,7 @@ export function Home() {
 							if (index === 0 || index === totalPages - 1) {
 								return (
 									<DefaultButton
+										aria-label={`Go to page ${index + 1}`}
 										key={index}
 										onClick={() =>
 											setCurrentPage(index + 1)
@@ -228,8 +240,10 @@ export function Home() {
 											currentPage === index + 1
 												? {
 														backgroundColor:
-															'#6991C7',
-														color: '#FFFFFF',
+															theme?.COLORS
+																.BLUE_200,
+														color: theme?.COLORS
+															.WHITE,
 												  }
 												: { backgroundColor: 'initial' }
 										}
@@ -257,8 +271,10 @@ export function Home() {
 											currentPage === index + 1
 												? {
 														backgroundColor:
-															'#6991C7',
-														color: '#FFFFFF',
+															theme?.COLORS
+																.BLUE_200,
+														color: theme?.COLORS
+															.WHITE,
 												  }
 												: { backgroundColor: 'initial' }
 										}
@@ -282,6 +298,7 @@ export function Home() {
 
 					{filteredPosts.length > 3 && currentPage != totalPages && (
 						<DefaultButton
+							aria-label='Next page'
 							onClick={() => setCurrentPage(currentPage + 1)}
 							disabled={endIndex >= filteredPosts.length}
 						>

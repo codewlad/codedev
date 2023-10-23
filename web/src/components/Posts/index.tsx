@@ -25,6 +25,8 @@ export function Posts({ data }: Props) {
 		const image = {
 			original: `${DeployURL}/${item.image}`,
 			thumbnail: `${DeployURL}/${item.image}`,
+			originalAlt: `${item.alt}`,
+			thumbnailAlt: `${item.alt}`,
 		};
 
 		images.push(image);
