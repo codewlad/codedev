@@ -1,5 +1,5 @@
-export const DeployURL = 'https://codewlad-dev.vercel.app';
-//export const DeployURL = '../../..';
+//export const DeployURL = 'https://codewlad-dev.vercel.app';
+export const DeployURL = '../../..';
 
 const Posts = [
 	{
@@ -133,6 +133,32 @@ const Posts = [
 			creditsAddress: 'instagram.com/coding.stella',
 		},
 		postType: 'video',
+	},
+	{
+		post_id: 'devicon-0006',
+		title: 'Devicon - Pacote de ícones',
+		intro: 'Com certeza você já foi no google procurar aquele PNG transparente para colocar no seu portfolio ou projeto e perdeu um tempão certo?',
+		description:
+			'O Devicon é um conjunto de ícones que representam linguagens de programação, ferramentas de design e desenvolvimento. Você pode usá-lo como fonte ou copiar/colar diretamente o código SVG em seu projeto.',
+		callToAction: 'Acesse aqui: ',
+		images: [
+			{
+				image: 'devicon-01.png',
+				alt: 'Página inicial do site',
+			},
+			{
+				image: 'devicon-02.png',
+				alt: 'Exemplo de busca do ícone',
+			},
+		],
+		video: '',
+		link: 'devicon.dev',
+		listOfLinks: [],
+		credits: {
+			creditsName: '',
+			creditsAddress: '',
+		},
+		postType: 'website',
 	},
 ];
 
