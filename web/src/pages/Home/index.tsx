@@ -2,19 +2,13 @@ import { useState, useEffect, useRef, useContext } from 'react';
 
 import { ThemeContext } from 'styled-components';
 import { BiSearchAlt } from 'react-icons/bi';
-import {
-	AiOutlineLinkedin,
-	AiOutlineGithub,
-	AiOutlineGlobal,
-	AiOutlineInstagram,
-	AiOutlineDoubleLeft,
-	AiOutlineDoubleRight,
-} from 'react-icons/ai';
+import { BsBoxArrowDownLeft } from 'react-icons/bs';
+import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from 'react-icons/ai';
 
 import { Posts } from '@components/Posts';
+import { Profile } from '@components/Profile';
 import { PinnedCard } from '@components/PinnedCard';
 import { ListOfPosts } from '@components/Posts/posts';
-import { IteractiveProfile } from '@components/IteractiveProfile';
 
 import { PostDTO } from '@dtos/PostDTO';
 
@@ -24,18 +18,16 @@ import {
 	PinnedGroup,
 	Header,
 	Content,
-	Profile,
 	Subtitle,
 	Title,
 	DefaultText,
-	SocialMedia,
-	ProfileInfo,
 	ContentHeader,
 	SearchGroup,
 	Search,
 	DefaultButton,
 	Pagination,
 	ShowAllPosts,
+	OpenAside,
 } from './styles';
 
 export function Home() {
@@ -115,48 +107,13 @@ export function Home() {
 				</DefaultText>
 			</Header>
 
-			<Profile>
-				<IteractiveProfile />
+			<aside>
+				<OpenAside>
+					<BsBoxArrowDownLeft />
+				</OpenAside>
+				<Profile />
+			</aside>
 
-				<ProfileInfo>
-					<p>
-						Olá, eu sou <strong>Wladimir Gonçalves</strong>!
-					</p>
-					<p>Desenvolvedor Web</p>
-					<p>São Paulo, Brasil</p>
-				</ProfileInfo>
-
-				<SocialMedia>
-					<a
-						href='https://www.linkedin.com/in/wladimir-gon%C3%A7alves'
-						target='_blank'
-						aria-label='Ir para o perfil no Linkedin'
-					>
-						<AiOutlineLinkedin size={36} />
-					</a>
-					<a
-						href='https://github.com/codewlad'
-						target='_blank'
-						aria-label='Ir para o perfil no GitHub'
-					>
-						<AiOutlineGithub size={36} />
-					</a>
-					<a
-						href='https://instagram.com/codewlad'
-						target='_blank'
-						aria-label='Ir para o perfil no Instagram'
-					>
-						<AiOutlineInstagram size={36} />
-					</a>
-					<a
-						href='https://codewlad.vercel.app'
-						target='_blank'
-						aria-label='Ir para o portfolio'
-					>
-						<AiOutlineGlobal size={36} />
-					</a>
-				</SocialMedia>
-			</Profile>
 			<Pinned>
 				<h2>Fixados</h2>
 				<PinnedGroup>

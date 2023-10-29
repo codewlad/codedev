@@ -18,6 +18,7 @@ export default createGlobalStyle`
         color: ${({ theme }) => theme.COLORS.DEFAULT};
         padding: 2rem;
         min-width: 360px;
+        transition: all 200ms;
 
         @media (max-width: 450px) {
             padding: 1rem;
