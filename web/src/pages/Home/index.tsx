@@ -51,7 +51,7 @@ export function Home() {
 		'cssflexbox-0005',
 		'devicon-0006',
 		'imagebank-0003',
-		'mobilefirst-0004',
+		'uiverse-0007',
 	];
 
 	const [currentPage, setCurrentPage] = useState(1);

@@ -160,6 +160,32 @@ const Posts = [
 		},
 		postType: 'website',
 	},
+	{
+		post_id: 'uiverse-0007',
+		title: 'Uiverse - Elementos prontos',
+		intro: 'Está sem tempo para criar um botão, card ou outro elemento? Precisa de inspiração ou de uma animação específica? Se alguma das respostas for SIM, eu tenho a dica certa!',
+		description:
+			'O Uiverse é um site com vários elementos e animações prontas para você colocar no seu projeto. Basta apenas selecionar o que quer e clicar em "Get code" para pegar o html e css.',
+		callToAction: 'Acesse aqui: ',
+		images: [
+			{
+				image: 'uiverse-01.png',
+				alt: 'Página inicial do site',
+			},
+			{
+				image: 'uiverse-02.png',
+				alt: 'Código do elemento selecionado',
+			},
+		],
+		video: '',
+		link: 'uiverse.io',
+		listOfLinks: [],
+		credits: {
+			creditsName: '',
+			creditsAddress: '',
+		},
+		postType: 'website',
+	},
 ];
 
 export const ListOfPosts = Posts.slice(0).reverse();
