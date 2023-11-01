@@ -186,6 +186,23 @@ const Posts = [
 		},
 		postType: 'website',
 	},
+	{
+		post_id: 'cssflexbox-0008',
+		title: 'CSS Responsive Columns',
+		intro: 'O CSS Columns é uma propriedade que permite dividir o conteúdo de um elemento em várias colunas,  sendo muito útil para textos longos, tornando a leitura mais fácil.',
+		description:
+			'Você pode definir o número de colunas desejado, a largura, o espaçamento entre elas e até mesmo dividir o conteúdo em colunas automaticamente. Isso oferece maior controle sobre o design e a apresentação do conteúdo.',
+		callToAction: '',
+		images: [],
+		video: 'responsivecolumns.mp4',
+		link: '',
+		listOfLinks: [],
+		credits: {
+			creditsName: '@coding.stella',
+			creditsAddress: 'instagram.com/coding.stella',
+		},
+		postType: 'video',
+	},
 ];
 
 export const ListOfPosts = Posts.slice(0).reverse();

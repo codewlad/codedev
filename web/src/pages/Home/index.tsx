@@ -50,7 +50,7 @@ export function Home() {
 	const pinnedPosts: string[] = [
 		'cssflexbox-0005',
 		'devicon-0006',
-		'imagebank-0003',
+		'cssflexbox-0008',
 		'uiverse-0007',
 	];
 
