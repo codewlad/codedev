@@ -203,6 +203,43 @@ const Posts = [
 		},
 		postType: 'video',
 	},
+	{
+		post_id: 'trainprogramming-0009',
+		title: '5 Sites para treinar programação',
+		intro: 'Explore esses 5 sites para fortalecer suas habilidades de programação e ainda se divertir enquanto pratica!',
+		description: '',
+		callToAction: '',
+		images: [],
+		video: '',
+		link: '',
+		listOfLinks: [
+			{
+				linkTitle: '100 Days CSS',
+				linkAddress: '100dayscss.com',
+			},
+			{
+				linkTitle: 'CSSBattle',
+				linkAddress: 'cssbattle.dev',
+			},
+			{
+				linkTitle: 'Codechef',
+				linkAddress: 'codechef.com',
+			},
+			{
+				linkTitle: 'Codier',
+				linkAddress: 'codier.io',
+			},
+			{
+				linkTitle: 'Exercism',
+				linkAddress: 'exercism.org',
+			},
+		],
+		credits: {
+			creditsName: 'OneBitCode',
+			creditsAddress: 'linkedin.com/school/onebitcode',
+		},
+		postType: 'listOfWebsites',
+	},
 ];
 
 export const ListOfPosts = Posts.slice(0).reverse();

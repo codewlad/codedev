@@ -1,6 +1,6 @@
 import { CardName, Container } from './styles';
 
-import { BsImages } from 'react-icons/bs';
+import { CgWebsite } from 'react-icons/cg';
 import { BiMoviePlay } from 'react-icons/bi';
 
 import { ListOfPosts, DeployURL } from '@components/Posts/posts';
@@ -30,7 +30,7 @@ export function PinnedCard({ data, onClick }: Props) {
 
 			{card?.postType === 'listOfWebsites' && (
 				<Container onClick={onClick}>
-					<BsImages size={72} />
+					<CgWebsite size={72} />
 					<CardName>{card?.title}</CardName>
 				</Container>
 			)}

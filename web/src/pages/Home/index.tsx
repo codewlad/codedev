@@ -48,7 +48,7 @@ export function Home() {
 		useState<boolean>(false);
 
 	const pinnedPosts: string[] = [
-		'cssflexbox-0005',
+		'trainprogramming-0009',
 		'devicon-0006',
 		'cssflexbox-0008',
 		'uiverse-0007',
