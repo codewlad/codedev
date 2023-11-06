@@ -240,6 +240,32 @@ const Posts = [
 		},
 		postType: 'listOfWebsites',
 	},
+	{
+		post_id: 'svgrepo-0010',
+		title: 'SVG Repo - Pacote de ícones',
+		intro: 'A dica de hoje é o site SVG Repo! Lá você pode encontrar vários pacotes de ícones dos mais variados tipos para usar nos seus projetos.',
+		description:
+			'Além de pode baixar o arquivo, você pode selecionar o ícone desejado, editar e copiar diretamente o código na sua página!',
+		callToAction: 'Confira aqui: ',
+		images: [
+			{
+				image: 'svgrepo-01.webp',
+				alt: 'Página inicial do site',
+			},
+			{
+				image: 'svgrepo-02.webp',
+				alt: 'Editando o ícone',
+			},
+		],
+		video: '',
+		link: 'svgrepo.com',
+		listOfLinks: [],
+		credits: {
+			creditsName: '',
+			creditsAddress: '',
+		},
+		postType: 'website',
+	},
 ];
 
 export const ListOfPosts = Posts.slice(0).reverse();
