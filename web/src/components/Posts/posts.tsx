@@ -271,7 +271,7 @@ const Posts = [
 		title: 'Scrollbar Personalizada',
 		intro: 'A dica de hoje é o site Scrollbar.app! Lá você consegue personalizar uma scrollbar e ver as mudanças em tempo real.',
 		description:
-			'Além de poder editar todas as propriedades, dá para vizualizar em modo claro e escuro e quando finalizar é só copiar e colar o código no seu projeto!',
+			'Além de poder editar todas as propriedades, dá para visualizar em modo claro e escuro e quando finalizar é só copiar e colar o código no seu projeto!',
 		callToAction: 'Confira aqui: ',
 		images: [
 			{
