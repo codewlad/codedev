@@ -245,7 +245,7 @@ const Posts = [
 		title: 'SVG Repo - Pacote de ícones',
 		intro: 'A dica de hoje é o site SVG Repo! Lá você pode encontrar vários pacotes de ícones dos mais variados tipos para usar nos seus projetos.',
 		description:
-			'Além de pode baixar o arquivo, você pode selecionar o ícone desejado, editar e copiar diretamente o código na sua página!',
+			'Além de poder baixar o arquivo, você pode selecionar o ícone desejado, editar e copiar diretamente o código na sua página!',
 		callToAction: 'Confira aqui: ',
 		images: [
 			{
@@ -259,6 +259,32 @@ const Posts = [
 		],
 		video: '',
 		link: 'svgrepo.com',
+		listOfLinks: [],
+		credits: {
+			creditsName: '',
+			creditsAddress: '',
+		},
+		postType: 'website',
+	},
+	{
+		post_id: 'scrollbar-0011',
+		title: 'Scrollbar Personalizada',
+		intro: 'A dica de hoje é o site Scrollbar.app! Lá você consegue personalizar uma scrollbar e ver as mudanças em tempo real.',
+		description:
+			'Além de poder editar todas as propriedades, dá para vizualizar em modo claro e escuro e quando finalizar é só copiar e colar o código no seu projeto!',
+		callToAction: 'Confira aqui: ',
+		images: [
+			{
+				image: 'scrollbar-01.webp',
+				alt: 'Página inicial do site',
+			},
+			{
+				image: 'scrollbar-02.webp',
+				alt: 'Editando o ícone',
+			},
+		],
+		video: '',
+		link: 'scrollbar.app',
 		listOfLinks: [],
 		credits: {
 			creditsName: '',

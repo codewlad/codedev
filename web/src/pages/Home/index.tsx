@@ -49,7 +49,7 @@ export function Home() {
 
 	const pinnedPosts: string[] = [
 		'trainprogramming-0009',
-		'svgrepo-0010',
+		'scrollbar-0011',
 		'cssflexbox-0008',
 		'uiverse-0007',
 	];
